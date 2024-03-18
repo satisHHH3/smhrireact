@@ -1,0 +1,30 @@
+.nav-bg-container{
+    width: 100%;
+    background-color: #c9d4d2;
+   min-height: 100px;
+   padding: 10px 8px;
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+   
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.nav-logo{
+    width: 50px;
+}
+
+.menu-button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}

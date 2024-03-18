@@ -1,0 +1,58 @@
+.bg-dash-container{
+    min-height: 100vh;
+    background-color: #e6ebf5;
+   width: 100%;
+   
+   
+}
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #e6ebf5;
+}
+
+.dashboard-container{
+   width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+  
+   
+}
+
+.dash-cards{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding-top: 25px;
+    color: #060829;
+}
+
+.dash-card-name{
+    font-family: Roboto;
+    font-weight: 400;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.dash-card-heading{
+    font-family: Roboto;
+    font-weight: 500;
+    padding-left: 20px;
+    line-height: 1.5;
+    color: #181929;
+}
+
+.waves{
+    
+    width: 100%;
+    
+    bottom: 0;
+    border-radius: 8px;
+}

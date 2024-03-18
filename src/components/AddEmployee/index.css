@@ -1,0 +1,88 @@
+.employee-bg-container{
+    min-height: 100vh;
+    background-color: #e6ebf5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    
+}
+
+.employee-card-container{
+    width: 95%;
+    background-color: #fff;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 8px;
+   display: flex;
+   flex-direction: column;
+
+}
+
+.employee-heading{
+    font-family: Roboto;
+    color: #0c0e3b;
+    font-weight: 500;
+    font-size: 17px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    
+}
+
+.employee-form-container{
+    padding: 20px;
+    height: 100%;
+width: 100%;
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+background-color: #fff;
+height: 110vh;
+}
+
+.employee-label-text{
+    width: 140px;
+    font-family: Roboto;
+    font-weight: 500;
+    color: #060829;
+    font-size: 15px;
+    
+    }
+
+    .employee-input-container{
+        display: flex;
+        align-items: center;
+        margin-bottom: 17px;
+       
+    }
+    
+    .employee-inputs{
+        width: 220px;
+        padding: 8px;
+        font-size: 16px;
+    font-family: Roboto;
+    color: #1f2021;
+    font-weight: 500;
+    border: 1px solid #cacdfa;
+    border-radius: 5px;
+    outline: none;
+    }
+
+    .employee-add-button{
+        background-color: #040526;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 13px;
+        color: #fff;
+        align-self: flex-end;
+        margin-right: 180px;
+        margin-top: 25px;
+    }

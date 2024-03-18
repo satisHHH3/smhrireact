@@ -1,0 +1,26 @@
+.employee-reports-bg-container{
+    min-height: 100vh;
+    display: flex;
+    background-color: #e6ebf5;
+}
+
+.employee-reports-container{
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+}
+
+
+.employee-reports-container h1{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    color: #02042b;
+    padding: 18px 18px;
+}
+
+.employee-reports-container hr{
+    height: 2px;
+    background-color: #02042b;
+}

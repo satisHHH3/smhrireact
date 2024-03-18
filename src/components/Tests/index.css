@@ -1,0 +1,25 @@
+.test-bg-container{
+    min-height: 100vh;
+    display: flex;
+    background-color: #e6ebf5;
+}
+
+.test-container{
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.test-container h1{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    color: #02042b;
+    padding: 18px 18px;
+}
+
+.test-container hr{
+    height: 2px;
+    background-color: #02042b;
+}

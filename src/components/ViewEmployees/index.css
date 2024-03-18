@@ -1,0 +1,17 @@
+.view-employee-table{
+width: 100%;
+overflow-x: auto;
+}
+
+.view-employee-table::-webkit-scrollbar{
+    border: 1px solid #02042b;
+    border-radius: 3px;
+    background-color: #02042b;
+    height: 6px;
+}
+
+.view-employee-table table  th {
+   
+   padding: 8px;
+    
+}
