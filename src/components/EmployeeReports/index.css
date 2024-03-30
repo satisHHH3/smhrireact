@@ -9,6 +9,7 @@
     border-radius: 5px;
     background-color: #fff;
     width: 100%;
+    
 }
 
 
@@ -18,9 +19,52 @@
     font-size: 20px;
     color: #02042b;
     padding: 18px 18px;
+   
 }
 
 .employee-reports-container hr{
     height: 2px;
     background-color: #02042b;
+}
+
+.employee-reports-table-container{
+    width: 100%;
+    overflow-x: scroll;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.employee-reports-table-container table{
+    width: 100%;
+   text-align: left;
+   border-collapse: collapse;
+   box-shadow: 0px 0px 2px #bfbfbf;
+}
+
+.employee-reports-table-container table thead tr th{
+    font-family: Roboto;
+    font-weight: 500;
+    padding: 15px 5px;
+}
+
+.employee-reports-table-container table tbody tr{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    color: #615f7a;
+    border-bottom: 1px solid #dedee0;
+}
+
+.employee-reports-table-container table tbody td button{
+    font-family: Roboto;
+    font-weight: 500;
+    color: #fff;
+    background-color: #02042b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 12px 12px;
+    width: 80px;
+    line-height: 1.5;
 }

@@ -1,5 +1,5 @@
 .employee-bg-container{
-    min-height: 100vh;
+    min-height: 110vh;
     background-color: #e6ebf5;
     width: 100%;
     display: flex;
@@ -40,7 +40,13 @@ display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 background-color: #fff;
-height: 110vh;
+
+}
+
+@media(min-width:768px){
+    .employee-form-container{
+        height: 120vh;
+    }
 }
 
 .employee-label-text{
@@ -62,13 +68,23 @@ height: 110vh;
     .employee-inputs{
         width: 220px;
         padding: 8px;
-        font-size: 16px;
+        font-size: 13px;
     font-family: Roboto;
-    color: #1f2021;
+    color: #2e2d2b;
     font-weight: 500;
     border: 1px solid #cacdfa;
     border-radius: 5px;
     outline: none;
+    }
+
+    
+
+    .employee-input-container select option{
+        font-family: Roboto;
+    color: #2e2d2b;
+    font-weight: 400;
+    font-size: 14px;
+    
     }
 
     .employee-add-button{
@@ -85,4 +101,31 @@ height: 110vh;
         align-self: flex-end;
         margin-right: 180px;
         margin-top: 25px;
+    }
+
+    .upload-img-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        
+    }
+
+    .upload-img-container input{
+        border: 1px solid lightblue;
+        width: 65%;
+        padding: 5px;
+        font-family: Roboto;
+    }
+
+    .upload-img-container input::-webkit-file-upload-button{
+        background-color: #cacdfa;
+    color: #060829;
+    padding: 8px;
+    font-family: Roboto;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
     }

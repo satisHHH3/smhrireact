@@ -91,13 +91,13 @@ const DataTable = ({ data,onClickDeleterow }) => { // Destructure data from prop
       <div className='page-container'>
           <p>Showing {currentPage + 1} to {totalPages} of {totalPages} entries</p>
           <div>
-        <button onClick={prevPage} disabled={currentPage === 0}>
+        <button onClick={prevPage} disabled={currentPage === 0} >
           Previous
         </button>
         <span>
           {currentPage + 1}
         </span>
-        <button onClick={nextPage} disabled={currentPage === totalPages - 1}>
+        <button onClick={nextPage} disabled={currentPage === totalPages - 1} >
           Next
         </button>
         </div>

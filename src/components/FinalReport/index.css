@@ -1,0 +1,51 @@
+.final-report-container{
+    min-height: 100vh;
+    padding: 20px 10px;
+}
+
+.final-report-container h1{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 25px;
+    color: #33373d;
+    text-align: center;
+    margin: 25px 0px;
+}
+
+.final-report-input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-report-input-container label{
+    font-family: Roboto;
+    font-weight: 400;
+    margin-right: 15px;
+    color: #898c91;
+    font-size: 18px;
+}
+
+.final-report-input-container input{
+    border: 1px solid #e4e9f2;
+    outline: none;
+    margin-right: 20px;
+    padding: 6px 4px;
+    font-family: Roboto;
+    font-weight: 400;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.final-report-input-container button{
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    font-family: Roboto;
+    font-weight: 500;
+    border-radius: 5px;
+    margin: 0px 12px;
+}

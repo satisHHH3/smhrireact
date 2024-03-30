@@ -22,4 +22,27 @@
 .test-container hr{
     height: 2px;
     background-color: #02042b;
+    margin-bottom: 30px;
+}
+
+.test-container table{
+    text-align: left;
+  
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.test-container table th{
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+.test-container table td{
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+.test-container table tbody tr{
+    border-bottom: 1px solid #797982;
 }

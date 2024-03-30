@@ -24,3 +24,77 @@
     height: 2px;
     background-color: #02042b;
 }
+
+.summary-table-container{
+    width: 100%;
+    padding: 20px;
+}
+
+.summary-table-container table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+   
+}
+
+.summary-table-container table tr th{
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+.summary-table-container table tbody tr{
+    border-bottom: 1px solid #d5dde8;
+}
+
+.summary-table-container table tbody td{
+   
+    padding-left: 0px;
+    font-family: Roboto;
+    font-weight: 400;
+    color: #787a7d;
+}
+
+.summary-page-container{
+    margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0px;
+  gap: 6px;
+  margin-left: 30%;
+}
+
+.summary-page-container .prev-button, .nxt-button{
+    background-color: #edebe4;
+    color: #06194d;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: Roboto;
+    font-weight: 400;
+    padding: 8px 16px;
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+.summary-page-container .num-button{
+    background-color: #edebe4;
+      color: #06194d;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-family: Roboto;
+      font-weight: 400;
+      padding: 12px 16px;
+      font-size: 19px;
+      border-radius: 48%;
+  }
+  
+.summary-reports-text{
+    text-decoration: none;
+    padding-left: 0px;
+    font-family: Roboto;
+    font-weight: 400;
+    color: #787a7d;
+}

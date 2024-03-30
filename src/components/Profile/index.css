@@ -1,0 +1,253 @@
+.profile-bg-container{
+    min-height: 100vh;
+    display: flex;
+    background-color: #c0c4c4;
+}
+
+.profile-card-container{
+    width: 100%;
+    padding: 30px 20px;
+}
+
+.profile-head-container{
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-head-container h1{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #454747;
+}
+
+.profile-head-container p{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+    
+}
+
+.profile-head-container button{
+    background-color: #2c3c61;
+    padding: 12px 12px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.profile-reports-container{
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.profile-tab-container{
+    border-bottom: 1px solid #999fad;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.profile-tab{
+    background-color: transparent;
+    padding: 12px 12px;
+    color: #454747;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.active-pro-tab{
+    background-color: transparent;
+    padding: 12px 12px;
+    color: #14131c;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   border-bottom: 1px solid #14131c;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.profile-personal-container{
+    margin-top: 15px;
+    
+}
+
+.profile-personal-container h1{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1.5;
+    color: #17181c;
+    
+    margin-bottom: 16px;
+}
+
+.profile-personal-container div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.profile-personal-container p{
+    width: 250px;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #454747;
+    font-size: 17px;
+}
+
+.profile-personal-container span{
+    font-weight: 400;
+    font-family: Roboto;
+    color: #454747;
+    font-size: 16px;
+}
+
+.profile-test-report-container{
+    box-shadow: 0px 1px 2px 1px #dce0e8;
+    padding: 25px 15px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.test-reports-tab-container{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 15px;
+}
+
+.test-reports-tab{
+    color: #454747;
+    background-color: transparent;
+    padding: 12px 12px;
+    color: #6e778a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.test-reports-tab-active{
+    color: #454747;
+    background-color: transparent;
+    padding: 12px 12px;
+    color: #6e778a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 17px;
+    box-shadow: 0px 0px 8px 0px #bfbfbf;
+}
+
+
+
+.profile-test-report-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-test-report-container form h1{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #2f4066;
+    
+    margin-top: 16px;
+    margin-bottom: 5px;
+}
+
+.profile-test-report-container label{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #202226;
+    margin-bottom: 5px;
+}
+
+.profile-test-report-container input{
+    padding: 6px;
+    border: 1px solid #aeb9d1;
+    border-radius: 5px;
+    outline: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 14px;
+    color: #202226;
+}
+
+.profile-test-report-container form button{
+    align-self: flex-start;
+    background-color: #234387;
+    padding: 8px 15px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   margin-bottom: 50px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.profile-test-report-container table{
+    background-color: #e6eaf2;
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.th-1{
+    text-align: left;
+    
+    padding: 8px 5px;
+}
+
+.th-2, .th-3{
+    text-align: center;
+   
+    width: 100px;
+    padding: 6px 6px;
+}
+
+.profile-test-report-container table tbody  tr {
+    border-bottom: 1px solid #7f7f8a;
+    
+}
+
+.kk{
+    height: 20px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    
+}

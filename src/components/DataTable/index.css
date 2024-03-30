@@ -3,19 +3,19 @@
     padding: 30px 10px;
 }
 
-table{
+.table-container table{
     
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
 
-table tr{
+.table-container table tr{
     color: #02042b;
     font-family: Roboto;
 }
 
-table tbody tr{
+.table-container table tbody tr{
     border-bottom: 1px solid #dfebe6;
     color: #02042b;
     font-family: Roboto;
@@ -23,19 +23,19 @@ table tbody tr{
     
 }
 
-table tbody tr:hover{
+.table-container table tbody tr:hover{
     
     background-color: #dfebe6;
     
 }
 
 
-table tr th, table tr td{
+.table-container table tr th, table tr td{
     padding: 15px 8px;
    
 }
 
-td .edit-button{
+.table-container td .edit-button{
     background-color: #02042b;
     border: none;
     outline: none;

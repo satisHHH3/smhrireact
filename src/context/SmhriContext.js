@@ -5,6 +5,7 @@ const SmhriContext = React.createContext({
     showEmployeeDrop: false,
     showReportsDrop:false,
     activeTab:"dashboard",
+    companyData: [],
     changeActiveTab: () => {},
     changeSidebar: () => {},
     changeEmployeeDrop: () => {},

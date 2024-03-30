@@ -14,6 +14,7 @@ background-color:#fff;
 margin:30px;
 border-radius:6px;
 padding:15px;
+
 `
 
 export const ButtonContainer = styled.div `
