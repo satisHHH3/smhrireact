@@ -133,7 +133,8 @@
 .test-reports-tab-container{
     display: flex;
     align-items: center;
-    gap: 80px;
+    flex-wrap: wrap;
+    gap: 10px 70px;
     margin-bottom: 15px;
 }
 
@@ -154,6 +155,7 @@
 .test-reports-tab-active{
     color: #454747;
     background-color: transparent;
+    
     padding: 12px 12px;
     color: #6e778a;
     border: none;
@@ -187,22 +189,22 @@
 .profile-test-report-container label{
     font-family: Roboto;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.5;
     color: #202226;
     margin-bottom: 5px;
 }
 
 .profile-test-report-container input{
-    padding: 6px;
+    padding: 8px;
     border: 1px solid #aeb9d1;
     border-radius: 5px;
     outline: none;
     font-family: Roboto;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 14px;
-    color: #202226;
+    color: #3c4242;
 }
 
 .profile-test-report-container form button{
@@ -250,4 +252,57 @@
     background-color: #fff;
     margin-bottom: 5px;
     
+}
+
+.form-report-container{
+    width: 100%;
+    padding: 20px;
+    width: 100%;
+}
+
+.form-report-container h1{
+    font-weight: 500;
+    font-family: Roboto;
+    color: #040d36;
+    font-size: 22px;
+}
+
+.form-report-container ul{
+    padding-left: 0px ;
+    list-style-type: none;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.form-report-container ul li{
+    padding: 0px 20px;
+    width: 280px;
+    
+    display: flex;
+    
+}
+
+.form-report-container ul li:hover{
+    border-bottom: 1px solid #040d36;
+}
+
+.form-report-container ul li button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18px;
+    color: #3e4461;
+}
+
+.form-report-container .report-link{
+    text-decoration: none;
+    text-align: center;
 }

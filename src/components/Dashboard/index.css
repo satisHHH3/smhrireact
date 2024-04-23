@@ -6,7 +6,7 @@
    
 }
 
-.container{
+.dash-container{
     display: flex;
     align-items: flex-start;
     min-height: 100vh;
@@ -22,16 +22,18 @@
    
 }
 
-.dash-cards{
+.dash-board-cards{
     width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     height: 170px;
     background-color: #fff;
     border-radius: 8px;
     padding-top: 25px;
     color: #060829;
+    
+   
 }
 
 .dash-card-name{
@@ -39,6 +41,7 @@
     font-weight: 400;
     padding-left: 20px;
     line-height: 1.5;
+   
 }
 
 .dash-card-heading{
@@ -47,12 +50,15 @@
     padding-left: 20px;
     line-height: 1.5;
     color: #181929;
+    font-size: 35px;
 }
 
-.waves{
-    
-    width: 100%;
-    
+.waves-img{
+    position: absolute;
     bottom: 0;
-    border-radius: 8px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: -1;
 }

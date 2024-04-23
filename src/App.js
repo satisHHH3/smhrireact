@@ -12,9 +12,46 @@ import Tests from './components/Tests';
 import EmployeeReports from './components/EmployeeReports'; 
 import SummaryReports from './components/SummaryReports'; 
 import Profile from './components/Profile'; 
-
 import FinalReport from "./components/FinalReport"
+import BioChemistryReport from './components/BioChemistryReport';
+import AudioMetryTest from './components/AudioMetryTest';
+import PsaReport from './pages/PsaReport'
+import G6pd from './pages/G6pd'
+import Cholinesterase from './pages/Cholinesterase'
+import Form32 from './pages/Form32'
+import Form33 from './pages/Form33'
+import Form31 from './pages/Form31'
+import FormNew from './pages/FormNew'
+import Form_O from './pages/Form_O'
+import FormXI from './pages/FormXI'
+import UricAcid from './pages/UricAcid'
+import Hba1c from './pages/Hba1c'
+import Hbsag from './pages/Hbsag'
+import Hcv from './pages/Hcv'
+import HealthCard from './pages/HealthCard'
+import Hiv from './pages/Hiv'
+import Medical from './pages/Medical'
+import MedicalCert from './pages/MedicalCert'
+import Sprotein from './pages/Sprotein'
+import Sputam from './pages/Sputam'
+import Stool from './pages/Stool'
+import Thyroid from './pages/Thyroid'
+import Vdrl from './pages/Vdrl'
+import VitaminB12 from './pages/VitaminB12'
+import VitaminD3 from './pages/VitaminD3'
+import XrayReport from './pages/XrayReport'
+/*
 
+import MedicalCert from './pages/MedicalCert'
+
+import Stool from './pages/Stool'
+
+
+
+import VitaminD3 from './pages/VitaminD3'
+
+
+*/
 
 import SmhriContext from './context/SmhriContext'; 
 
@@ -554,11 +591,12 @@ class App extends Component {
   }
 
   changeEmployeeDrop = () => {
-    this.setState((prevState) => ({showEmployeeDrop: !prevState.showEmployeeDrop}))
+    this.setState((prevState) => ({showEmployeeDrop: !prevState.showEmployeeDrop,showReportsDrop: false}))
+    
 }
 
 changeReportDrop = () => {
-    this.setState((prevState) => ({showReportsDrop: !prevState.showReportsDrop}))
+    this.setState((prevState) => ({showReportsDrop: !prevState.showReportsDrop,showEmployeeDrop: false}))
 }
 
 changeActiveTab = (id) => {
@@ -573,7 +611,34 @@ changeActiveTab = (id) => {
     changeEmployeeDrop:this.changeEmployeeDrop,changeReportDrop:this.changeReportDrop,changeActiveTab: this.changeActiveTab }}>
       
       <BrowserRouter>
-      <Switch>
+           <Switch>
+           <ProtectedRoute exact path="/x_ray_report/:id" component={XrayReport} />
+           <ProtectedRoute exact path="/vitamin_d3/:id" component={VitaminD3} />
+           <ProtectedRoute exact path="/vitamin_b12/:id" component={VitaminB12} />
+           <ProtectedRoute exact path="/s_protein/:id" component={Sprotein} />
+           <ProtectedRoute exact path="/vdrl/:id" component={Vdrl} />
+           <ProtectedRoute exact path="/thyroid/:id" component={Thyroid} />
+           <ProtectedRoute exact path="/stool/:id" component={Stool} />
+           <ProtectedRoute exact path="/sputam/:id" component={Sputam} />
+           <ProtectedRoute exact path="/form_32/:id" component={Form32} />
+           <ProtectedRoute exact path="/form_31/:id" component={Form31} />
+           <ProtectedRoute exact path="/medical_cert/:id" component={MedicalCert} />
+           <ProtectedRoute exact path="/medical/:id" component={Medical} />
+           <ProtectedRoute exact path="/hiv/:id" component={Hiv} />
+           <ProtectedRoute exact path="/health_card/:id" component={HealthCard} />
+           <ProtectedRoute exact path="/hcv/:id" component={Hcv} />
+           <ProtectedRoute exact path="/hbsag/:id" component={Hbsag} />
+           <ProtectedRoute exact path="/hba1c/:id" component={Hba1c} />
+           <ProtectedRoute exact path="/uric_acid/:id" component={UricAcid} />
+           <ProtectedRoute exact path="/form_11/:id" component={FormXI} />
+           <ProtectedRoute exact path="/form_new_o/:id" component={FormNew} />
+           <ProtectedRoute exact path="/form_o/:id" component={Form_O} />
+           <ProtectedRoute exact path="/form_33/:id" component={Form33} />
+           <ProtectedRoute exact path="/cholinesterase/:id" component={Cholinesterase} />
+           <ProtectedRoute exact path="/g6pd/:id" component={G6pd} />
+            <ProtectedRoute exact path="/psa/:id" component={PsaReport} />
+           <ProtectedRoute exact path="/bio_chemistry_report/:id" component={BioChemistryReport} />
+           <ProtectedRoute exact path="/audiometry" component={AudioMetryTest} />
            <ProtectedRoute exact path="/final-reports" component={FinalReport} />
            <ProtectedRoute exact path="/profile/:id" component={Profile} />
            <ProtectedRoute exact path="/view-employees" component={ViewEmployees} />

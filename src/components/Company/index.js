@@ -65,7 +65,7 @@ test: "Urine_Examination"
 
 
 class Company extends Component{
-    state = {apiStatus:apiStatusConstants.initial,activeId:testObj[0].id,companyData:[],name:"",email:"",phone:"",pincode:"",address:"",country:"",test:"",certificate:null}
+    state = {apiStatus:apiStatusConstants.initial,activeId:[testObj[0].id],companyData:[],name:"",email:"",phone:"",pincode:"",address:"",country:"",test:"",certificate:null}
 
     
 
@@ -73,8 +73,7 @@ class Company extends Component{
         this.setState({apiStatus:apiStatusConstants.inProgress})
         const url = "https://cloudconnectcampaign.com/smhri/api/company_master/" 
         const jwt = Cookies.get("jwt_token")
-        console.log(jwt)
-
+        
         const options = {
             method: "GET",
             headers: {
@@ -107,8 +106,7 @@ class Company extends Component{
 
     onChangeOption = (event) => {
         console.log(event.target.value)
-        this.setState({activeId:event.target.value})
-
+        this.setState((prevState) => ({activeId:[...prevState.activeId, event.target.value]}))
     }
 
     componentDidMount(){
@@ -196,8 +194,7 @@ class Company extends Component{
 
     renderButtonAndPopContainer = () => {
         const {activeId,name,phone,email,pincode,address,country,certificate} = this.state
-        console.log(name)
-        
+        console.log(activeId)
         return(
         <div className="company-top-text-container">
         <h1 className="company-heading">List Of Companies</h1>
@@ -290,7 +287,7 @@ class Company extends Component{
 
                             <div className="input-container">
                                 <label htmlFor="test" className="label-text">Company Test*</label>
-                                <select id="test" value={activeId} onChange={this.onChangeOption} type="text" className="pop-inputs">
+                                <select id="test"  onChange={this.onChangeOption} type="text" className="pop-inputs" value={activeId}>
                                         {testObj.map((each) => (
                                             <option key={each.id} value={each.id}>{each.test}</option>
                                         ))}

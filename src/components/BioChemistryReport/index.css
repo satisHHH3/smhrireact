@@ -1,0 +1,41 @@
+.report_header_form {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  #srno {
+    text-align: center;
+  }
+  
+  tr td {
+    /* padding: 0.7em; */
+  }
+  
+  tbody,
+  td,
+  tfoot,
+  th,
+  thead,
+  tr {
+    border-width: inherit;
+  }
+  
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    .div_res,
+    .div_res * {
+      visibility: visible;
+    }
+    .report_header_form {
+      display: none;
+    }
+    table {
+      font-size: 10px !important;
+    }
+    .div_res {
+      margin-top: 90px;
+    }
+  }
+  

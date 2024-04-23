@@ -1,3 +1,5 @@
+
+
 .employee-bg-container{
     min-height: 110vh;
     background-color: #e6ebf5;
@@ -8,6 +10,14 @@
     padding-bottom: 15px;
     
     
+}
+
+.add-employee-container{
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #e6ebf5;
+    position: relative;
 }
 
 .employee-card-container{
@@ -129,3 +139,11 @@ background-color: #fff;
     font-size: 14px;
     cursor: pointer;
     }
+
+.notify-text{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0px !important;
+    margin: 0px 3px!important;
+}

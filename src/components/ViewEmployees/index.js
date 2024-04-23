@@ -5,6 +5,9 @@ import Sidebar from '../Sidebar'
 import Cookies from "js-cookie"
 import {TailSpin} from 'react-loader-spinner'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import SmhriContext from '../../context/SmhriContext'
 
 import { MdOutlineDeleteOutline } from "react-icons/md";
@@ -57,14 +60,17 @@ class ViewEmployees extends Component{
             })
 
             this.setState({employeeData:updateData,apiStatus:apiStatusConstants.success})
-           
+           console.log("hi")
         }
        
 
     }
 
+   
+    
     componentDidMount(){
         this.getViewEmployeesData()
+       
     }
 
 
@@ -81,14 +87,15 @@ class ViewEmployees extends Component{
 
         if(request.ok){
             this.getViewEmployeesData()
+            
         }
         
         
     }
 
     onClickPrevious = () => {
-        const {currentPage} = this.state 
-
+        const {currentPage,} = this.state 
+       
         if(currentPage !== 1){
             this.setState((prevState) => ({currentPage: prevState.currentPage - 1}))
         }
@@ -117,20 +124,145 @@ class ViewEmployees extends Component{
     }
 
 
-    renderViewEmployeesPage = () => {
-        
-    }
+   
 
-    render(){
-        const {employeeData,currentPage,itemsPerPage,searchInput} = this.state
+    renderEmployeeTableView = () => {
+        const {employeeData,currentPage,itemsPerPage,searchInput,listCompany} = this.state
         
         const lastIndexOfPage = currentPage * itemsPerPage
         const firstIndexOfPage = lastIndexOfPage - itemsPerPage 
-        const filterData = employeeData.filter((each) => each.firstName.toLowerCase().includes(searchInput.toLowerCase()))
-        const currentItems = filterData.slice(firstIndexOfPage, lastIndexOfPage)
+       const filterData = employeeData.filter((each) => {
+       
+        if(each.firstName !== null){
+            
+            return each.firstName.toLowerCase().includes(searchInput.toLowerCase())
+        }else{
+            return null
+        }
+       })
+     const currentItems = filterData.slice(firstIndexOfPage, lastIndexOfPage)
         const npage  = Math.ceil(filterData.length / itemsPerPage)
         const numbers = [...Array(npage + 1).keys()].slice(1)
-       console.log(filterData)
+        
+        return(
+        <SmhriContext.Consumer>
+            {value => {
+                const {companyData} = value 
+
+                return(
+                    <div className='view-employee-table'>
+                    <div >
+                        <div className='search-container'>
+                            <div>
+                            <span>Show</span>
+                            <select onChange={this.onChangeItemsPerPage}>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                            <span>
+                                entries
+                            </span>
+                            </div>
+                            <span>Search:</span>
+                            <input type="text" onChange={this.onChangeInput}/>
+                            
+                        </div>
+                       <table>
+                         <thead>
+                        <tr >
+                            <th >id</th>
+                            <th id="listname">Company Name</th>
+                            <th>Name</th>
+                            <th>Ticket Number</th>
+                            <th >Address</th>
+                            <th>City</th>
+                            <th>Birthdate</th>
+                            <th>Designation</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {currentItems.map((user,index) => {
+                            const isEvenNum = user.id % 2 === 0
+                            const companyName = companyData.find((each) => each.id === parseInt(user.listCompany))
+                            
+                            return(
+                            <tr key={index}>
+                                <td className ={isEvenNum ? "even-num" : "odd-num"}>{user.id}</td>
+                                <td>{companyName.name}</td>
+                                <td><Link to={`/profile/${user.id}`} className="name-link">{user.firstName}</Link></td>
+                                <td>{user.ticketNo}</td>
+                                <td>{user.address}</td>
+                                <td>{user.city}</td>
+                                <td>{user.birthdate}</td>
+                                <td>{user.designation}</td>
+                                <td>{user.department}</td>
+                                <td>{user.status}</td>
+                                <td>
+                                    <button className="view-employee-button-pencil">{<PiPencilBold size="14"/>}</button>
+                                    <button className='view-employee-button-delete'  onClick={() => this.onClickDelelte(user.id)}>{<MdOutlineDeleteOutline size="14"/>}</button>
+                                </td>
+                            </tr>
+                        )})}
+                        </tbody>
+                    
+                        </table>
+                        <div className='entries-and-page-container'>
+                            <p>Showing 1 to {itemsPerPage} of {filterData.length} entries</p>
+                        <ul className='view-employees-pagination-container'>
+                            <li>
+                            <button type="button" className='prev-button' onClick={this.onClickPrevious}>Previous</button>
+                            </li>
+                            {numbers.map((n,i) => (
+                               <li key={i}>
+                                  <button type="button" onClick={() => this.onClickChangePage(n)} className={`num-button ${currentPage === n ? "active-num" : ""}`}>{n}</button>
+                               </li>
+                            ))}
+                           
+                            <li>
+                            <button type="button" className='nxt-button' onClick={() => this.onClickNxtPage(npage)} >Next</button>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                )
+            }}
+        </SmhriContext.Consumer>
+    )
+}
+
+renderLoadingView = () => (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '30vh' }}>
+  <TailSpin
+    type="ThreeDots"
+    color="#00BFFF"
+    height={50}
+    width={50}
+  />
+</div>
+  )
+
+renderViewEmployeesPage = () => {
+        const {apiStatus} = this.state
+
+        switch(apiStatus){
+            case apiStatusConstants.inProgress:
+                return this.renderLoadingView()
+            case apiStatusConstants.success:
+                return this.renderEmployeeTableView()
+            default:
+                return null
+        }
+}
+
+
+    render(){
+       
 
         return(
             <SmhriContext.Consumer>
@@ -152,7 +284,8 @@ class ViewEmployees extends Component{
                         </div>
                     </ButtonContainer>
                     <hr/>
-                <div className='view-employee-table'>
+                    {this.renderViewEmployeesPage()}
+             {  /* <div className='view-employee-table'>
                     <div >
                         <div className='search-container'>
                             <div>
@@ -231,7 +364,7 @@ class ViewEmployees extends Component{
                         </ul>
                         </div>
                     </div>
-                </div>
+                            </div> */}
                 </BgContainer>
             </Container>
             </>

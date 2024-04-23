@@ -57,7 +57,6 @@ const DataTable = ({ data,onClickDeleterow }) => { // Destructure data from prop
 
   return (
     <div className='table-container'>
-      
       <table>
         <thead>
           <tr>
@@ -71,23 +70,21 @@ const DataTable = ({ data,onClickDeleterow }) => { // Destructure data from prop
         </thead>
         <tbody>
   {sortedData().slice(startIndex, endIndex).map((user, index) => (
-
     <tr key={index}>
-      <td>{user.id}</td> {/* Adjust property names based on your data structure */}
-      <td>{user.name}</td> {/* Adjust property names based on your data structure */}
-      <td>{user.email}</td> {/* Adjust property names based on your data structure */}
-      <td>{user.phone}</td> {/* Adjust property names based on your data structure */}
-      <td>{user.pincode}</td> {/* Adjust property names based on your data structure */}
-      <td>{user.address}</td> {/* Adjust property names based on your data structure */}
+      <td>{user.id}</td> 
+      <td>{user.name}</td>
+      <td>{user.email}</td>
+      <td>{user.phone}</td>
+      <td>{user.pincode}</td>
+      <td>{user.address}</td>
       <td>
         <button className='edit-button'>{<PiPencilBold size="12"/>}</button>
         <button className='delete-button' onClick={() => onClickDelelte(user.id)}>{<MdOutlineDeleteOutline size="12"/>}</button>
       </td>
-
     </tr>
   ))}
 </tbody>
-      </table>
+</table>
       <div className='page-container'>
           <p>Showing {currentPage + 1} to {totalPages} of {totalPages} entries</p>
           <div>
