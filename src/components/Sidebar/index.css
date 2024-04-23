@@ -8,6 +8,12 @@
    z-index: 19999;
 }
 
+@media(max-width:768px){
+   .side-bg-container{
+      display: none;
+   }
+}
+
 .open-side{
    width:50px;
    height: 84vh;
